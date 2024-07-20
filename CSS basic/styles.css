@@ -1,0 +1,20 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1,h3{
+    color: red;
+}
+#login{
+    background-color: white;
+}
+#signup{
+    background-color: red;
+    color: white;
+}
+.upvote{
+    background-color: green;
+    color: aliceblue;
+}
+p a{
+    color: purple;
+}
