@@ -18,3 +18,27 @@ h1,h3{
 p a{
     color: purple;
 }
+p+h3{
+    text-decoration: underline;
+}
+div>input{
+    background-color: green;
+}
+input[type="password"]{
+    color: red;
+}
+button:hover{
+    background-color: black;
+    color: white;
+    
+}
+h3:hover{
+    text-decoration: overline;
+}
+button:active{
+    background-color: pink;
+}
+
+input[type="radio"]:checked +label{
+    color: red;
+}
