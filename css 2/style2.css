@@ -1,0 +1,10 @@
+li{
+    display: inline-block;
+}
+.div3{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline-block;
+}
