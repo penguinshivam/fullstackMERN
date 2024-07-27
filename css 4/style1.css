@@ -1,0 +1,22 @@
+#container{
+    height: 50px; ;
+    width: 900px;
+    background-color: pink;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    border-radius: 25px;
+    align-content: center;
+    justify-content: flex-start;
+}
+h1{
+    text-align: center;
+}
+
+#container div{
+    height: 50px;
+    width: 80px;
+    margin-left: 5px;
+    font-size: 24px;
+    line-height: 50px;
+}
