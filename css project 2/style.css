@@ -187,12 +187,6 @@ a{
         display: none;
     }
 }
-@media (max-width:600px) {
-    .player{
-        /* position: fixed; */
-    }
-    
-}
 .footer{
     height: 300px;
     display: flex;
