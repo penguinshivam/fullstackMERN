@@ -172,3 +172,77 @@ if( str2[idx] == str2[idx].toLowerCase()){
 }else{
     console.log("not lowercase");
 }
+
+console.log(typeof null);
+let obj={
+    null: true
+};
+
+console.log();
+
+let arr=[]
+arr.push(4);
+console.log(arr);
+
+let count=0;
+function volco (str) {
+    for (let i = 0; i < str.length; i++) {
+        if (str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u') {
+            count++;
+        }
+    }
+    return count;
+}
+let str='abcdefghijklmno';
+// console.log(str.length);
+
+console.log(volco(str));
+
+let ans="";
+
+function uni (str) {
+    ans=ans+str[0];
+    console.log(ans[0]!=str[4]);
+    
+    for (let i = 1; i < str.length; i++) {
+        // console.log(str[i]);
+        if (ans.indexOf(str[i])==-1) {
+            
+            ans=ans+str.charAt(i);
+        }
+
+    }    
+    return ans;
+}
+let s="abcdabcefgggh";
+console.log(uni(s));
+let ans="";
+
+function uni (str) {
+    ans=ans+str[0];
+    console.log(ans[0]!=str[4]);
+    
+    for (let i = 1; i < str.length; i++) {
+        // console.log(str[i]);
+        let curr = str.charAt(i);
+
+        for (let j = 0; j < ans.length; j++) {
+            // console.log(curr!=ans.charAt(j));
+            if (curr!=ans.charAt(j)) {
+                ans+=curr;
+
+            }
+            
+        }
+
+    }    
+    return ans;
+}
+let s="abcdabcefgggh";
+console.log(uni(s));
+
+function rand(s,e){
+    return Math.floor(Math.random()*(e-s+1))+s;
+}
+console.log(rand(4,5));
+
