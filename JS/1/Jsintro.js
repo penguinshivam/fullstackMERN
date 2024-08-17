@@ -285,3 +285,24 @@
 
 
 
+
+let btn = document.querySelectorAll("button")
+for (button of btn) {
+    
+    button.addEventListener("click",clicked)
+    // button.addEventListener("click",sayhello)
+
+    button.addEventListener("dblclick",function(){
+        //  console.log("buttona was clicked")
+         alert("hello!!")
+    })
+
+    // button.onclick=sayhello;
+}
+
+function clicked(){
+    console.log("button was clicked");
+}
+function sayhello(){
+    alert("hello!!");
+}
