@@ -39,6 +39,28 @@
             console.log(color);
             
         })
+        div.addEventListener("mouseenter",function(){
+            console.log("genrate random color");
+            let red= Math.floor(Math.random()*255);
+            let green= Math.floor(Math.random()*255);
+            let blue= Math.floor(Math.random()*255);
+            let color=`rgb(${red},${green},${blue})`;
+            document.querySelector("h3").innerText=color;
+            div.style.backgroundColor=color;
+            // return color;
+            console.log(color);
+        })
+        div.addEventListener("mouseleave",function(){
+            console.log("genrate exit random color");
+            let red= Math.floor(Math.random()*255);
+            let green= Math.floor(Math.random()*255);
+            let blue= Math.floor(Math.random()*255);
+            let color=`rgb(${red},${green},${blue})`;
+            document.querySelector("h3").innerText=color;
+            div.style.backgroundColor=color;
+            // return color;
+            console.log(color);
+        })
 
     </script>
 </body>

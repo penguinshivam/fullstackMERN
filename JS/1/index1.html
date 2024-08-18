@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>USe of "this" in Event Listener</h1>
+    <h3>Let's demo it on element</h3>
+    <button>Click me!</button>
+    <p> this is a sample paragraph</p>
+    <script>
+        let btn = document.querySelector("button");
+        let p = document.querySelector("p");
+        let h1 = document.querySelector("h1");  
+        let h3 = document.querySelector("h3");
+
+        btn.addEventListener("click",function(){
+            console.dir(this.innerText);
+            this.style.backgroundColor ="blue";
+        });
+        p.addEventListener("click",function(){
+            console.dir(this.innerText);
+            this.style.backgroundColor ="blue";
+        });
+        h1.addEventListener("click",function(){
+            console.dir(this.innerText);
+            this.style.backgroundColor ="blue";
+        });
+        h3.addEventListener("click",function(){
+            console.dir(this.innerText);
+            this.style.backgroundColor ="blue";
+        });  
+
+        if (inp.value>=65&&inp.value<=122) {
+            
+        }
+    </script>
+</body>
+</html>
