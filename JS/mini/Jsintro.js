@@ -306,3 +306,72 @@
 // function sayhello(){
 //     alert("hello!!");
 // }
+// ------------- class 11 ------------------------
+//  // Call Stack
+// function hello(){
+//     console.log("inside hello fnc");
+//     console.log("hello");
+// }
+// function demo(){
+//     console.log("calling hello fnc");
+//     hello();
+// }
+// console.log("calling demo fnc");
+// demo();
+// console.log("done");
+
+// // Visualizing break point
+// function one(){
+//     return 1;
+// }
+// function two(){
+//     return one() + one();
+// }
+// function three(){
+//     let ans = two() + one();
+//     console.log(ans);  
+// }
+// three();
+
+// // single thread 
+// synchrous nature 
+// let a = 25;
+// console.log(a);
+// let b = 10;
+// console.log(b);
+// console.log(a+b);
+
+// asynchrous natiure - multiple code run at same time but java is single threaded => problem
+// setTimeout(function (){
+//     console.log("apna college");
+// },2000);
+// setTimeout(function (){
+//     console.log("apna world");
+// },2000);
+// console.log("hello....");
+
+h1 = document.querySelector("h1");
+
+// setTimeout(()=>{
+//     h1.style.color = "red";
+// },1000);
+// setTimeout(()=>{
+//     h1.style.color = "orange";
+// },2000);
+// setTimeout(()=>{
+//     h1.style.color = "green";
+// },3000);
+
+function changeColor(color , delay,nextColorChange){
+    setTimeout(()=>{
+        h1.style.color = color;
+        if(nextColorChange) nextColorChange();
+    },delay)
+}
+changeColor("red",1000,()=>{
+    changeColor("orange",1000,()=>{
+        changeColor("green",1000);
+    });
+});
+// changeColor("green",3000);
+// callback nesting -> callback hell -> promise , async
