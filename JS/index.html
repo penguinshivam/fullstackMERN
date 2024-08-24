@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    
+    <script>
+
+        // function saveToDb(data,success,failure){
+        //     let rand=Math.floor(Math.random()*10)+1;
+        //     if(rand>4){
+        //         // console.log("strong");
+        //         success();
+        //     }
+        //     else{
+        //         // console.log("weak");
+        //         failure();
+                
+        //     }
+        // }
+        // saveToDb(
+        //     "apna",
+        //     ()=>{
+        //         console.log("strong connection");
+        //         saveToDb(
+        //             "apna",
+        //             ()=>{
+        //                 console.log("strong2 connection");
+        //                 saveToDb(
+        //                     "apna",
+        //                         ()=>{
+        //                             console.log("strong3 connection");
+        //                         },
+        //                         ()=>{
+        //                             console.log("weak3 connection");
+        //                         }
+        //                     );
+        //             },
+        //             ()=>{
+        //                 console.log("weak2 connection");
+        //             }
+        //         );
+        //     },
+        //     ()=>{
+        //         console.log("weak connection");
+        //     }
+        // );
+
+
+        // function saveToDb(data){
+        //     // let rand=Math.floor(Math.random()*10)+1;
+        //     return new Promise((resolve,reject)=>{
+        //         let rand=Math.floor(Math.random()*10)+1;
+        //         if(rand>3){
+        //             // console.log("strong");
+        //             resolve("data saved");
+        //         }
+        //         else{
+        //         // console.log("weak");
+        //             reject("weak");
+        //         }
+        //     });
+        // }
+
+        // saveToDb("apna college")
+        // .then((result)=>{
+        //     console.log("resoolved datq1");
+        //     console.log(result);
+        //     return saveToDb("hello")
+        // })
+        // .then((result)=>{
+        //         console.log("resolved data 2");
+        //         console.log(result);
+        //         return saveToDb("world")
+        // })
+        // .then((result)=>{
+        //         console.log("resolved data 3");
+        //         console.log(result);
+        // })
+        // .catch((error)=>{
+        //     console.log("fail");
+        //     console.log(error);
+            
+        // })
+            let h1=document.querySelector("h1")
+            function changeColor(color , delay){
+                return new Promise((resolve,reject)=>{
+                let rand=Math.floor(Math.random()*10)+1;
+                    if (rand >5) {
+                        reject("fail");
+                    }
+                    setTimeout(()=>{
+                    h1.style.color = color;
+                    console.log(color);
+                    
+                    resolve("color changed");
+                },delay);
+                });
+                
+            }
+
+            async function demo() {
+            try {
+                await changeColor("red",1000);
+                await changeColor("orange",1000);
+                await changeColor("green",1000);
+                await changeColor("blue",1000);                    
+                console.log(5);
+            } 
+            catch (error) {
+                console.log("error");       
+                console.log(5);
+            }    
+                
+            }
+            // changeColor("red",1000)
+            // .then(()=>{
+            //     console.log("red");
+            //     return changeColor("orange",1000);
+            // })
+            // .then(()=>{
+            //     console.log("orange");
+            //     return changeColor("green",1000);
+            // })
+            // .then(()=>{
+            //     console.log("green");
+            //     return changeColor("blue",1000);
+            // })
+            // .then(()=>{
+            //     console.log("blue");
+            // })
+            // changeColor("red",1000,()=>{
+            //     changeColor("orange",1000,()=>{
+            //         changeColor("green",1000);
+            //     });
+            // });
+            // changeColor("green",3000);
+            // async function greet() {
+            //     return "hello";
+            // }
+            // greet()
+            // .then(()=>{
+            //     console.log("resolved");
+                
+            // })
+            // .catch(()=>{
+            //     console.log("err");
+                
+            // })
+            // function getNum(){
+            //     return new Promise((resolve,reject)=>{
+            //         setTimeout(()=>{
+            //             let num=Math.floor(Math.random()*10)+1;
+            //             console.log(num);
+            //             resolve();
+            //         },1000);
+            //     });
+            //     // console.log(5);
+            // }
+
+            // async function demo() {
+            //     await getNum();
+            //     await getNum();
+            //     await getNum();
+            //     await getNum();
+            //     await getNum();
+            // }
+    </script>
+
+</body>
+</html>

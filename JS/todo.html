@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Todo App</h1>
+    <input placeholder="Enter Your Task">
+    <button>Add Task</button> 
+    <ul>
+        <li>eat <button class="delete">delete</button></li>
+        <li>sleep <button class="delete">delete</button></li>
+    </ul>
+    <script>
+        let inp=document.querySelector("input");
+        let ul=document.querySelector("ul");
+        let btn=document.querySelector("button");
+
+        btn.addEventListener("click", function(){
+            let li =document.createElement("li");
+
+            li.innerText=inp.value;
+            let delbtn = document.createElement("button");
+            delbtn.innerText="delete"
+            delbtn.classList.add("delete");
+
+            li.appendChild(delbtn);
+            ul.appendChild(li);
+            inp.value="";
+            // console.log("clicked");
+        })
+        // let delbtns=document.querySelectorAll(".delete")
+
+        // for(del of delbtns){
+        //     del.addEventListener("click",function(){
+        //         let par =this.parentElement;
+        //         par.remove();
+        //         // console.log("delete");
+                
+        //     })
+        // }
+        ul.addEventListener("click",function(event){
+            // console.log("button clicked");
+            // console.log();
+            if (event.target.nodeName=="BUTTON") {
+                let li=event.target.parentElement;
+                li.remove();
+            }
+            
+        })
+    </script>
+</body>
+</html>
