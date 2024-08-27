@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Get dog image</h1> -->
+
+    <input placeholder="enter country">
+    <button>search</button>
+    <!-- <br> -->
+    <!-- <p id="image"></p> -->
+    <br>
+    <ul></ul>
+
+    <!-- <img style="height: 50vh; width: 50vh;" src=""> -->
+
+    <!-- <h1>Get dog image</h1>
+    <button>Show new image</button>
+    <br>
+    <a id="image"></a>
+    <br>
+    <img style="height: 50vh; width: 50vh;" src=""> -->
+    
+    <!-- <h1>Get Facts</h1>
+    <button>Show new fact</button>
+    <p id="facts"></p> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script>
+        let url="http://universities.hipolabs.com/search?country=";
+        
+        let body=document.querySelector("body");
+        let button=document.querySelector("button");
+        let ul=document.querySelector("ul");
+        button.addEventListener("click",async () => {
+            let input=document.querySelector("input");
+            let country=input.value;
+            console.log(country);
+            let clg=await getColleges(country);
+            console.log(clg);
+            show(clg);
+            
+            
+        })
+        function show(clgarr){
+            ul.innerText="";
+            for(clg of clgarr){
+                console.log(clg.name);
+                let li =document.createElement("li");
+                li.innerText=clg.name;
+                ul.appendChild(li);
+                
+            }
+        }
+
+        async function getColleges(country) {
+            try {
+                let res=await axios.get(url+country);
+                return res.data;            
+            } catch (error) {
+                console.log("error-",e); 
+            }
+            console.log("bye");
+        }
+
+        // let url="https://icanhazdadjoke.com/";
+        // let header={headers:{Accept: "application/json"}};
+
+        // let body=document.querySelector("body");
+        // let button=document.querySelector("button");
+        // let p=document.querySelector("p");
+        // let img=document.querySelector("img");
+        // button.addEventListener("click",getFacts)
+        // async function getFacts() {
+        //     try {
+        //         // let res=await fetch(url);
+        //         // let data=await res.json();
+        //         let res=await axios.get(url,header);
+        //         console.log(res.data);
+        //         let p1=document.createElement("p1");
+        //         let img1=document.createElement("img");
+        //         let br = document.createElement("br")
+        //         let hr = document.createElement("hr")
+        //         p1.innerHTML=res.data.joke
+        //         body.append(p1);
+        //         body.append(br);
+        //         body.append(hr);                
+        //     } catch (error) {
+        //         console.log("error-",e); 
+        //     }
+        //     console.log("bye");
+        // }
+
+        // let url="https://dog.ceo/api/breeds/image/random";
+
+        // let body=document.querySelector("body");
+        // let button=document.querySelector("button");
+        // let p=document.querySelector("a");
+        // let img=document.querySelector("img");
+        // button.addEventListener("click",getFacts)
+        // async function getFacts() {
+        //     try {
+        //         // let res=await fetch(url);
+        //         // let data=await res.json();
+        //         let res=await axios.get(url);
+        //         console.log(res.data.message);
+        //         let p1=document.createElement("p1");
+        //         let img1=document.createElement("img");
+        //         let br = document.createElement("br")
+        //         let hr = document.createElement("hr")
+        //         // p.innerHTML=res.data.message
+        //         img1.src=res.data.message;
+        //         img1.style.height="50vh"
+        //         img1.style.width="50vh"
+        //         body.append(img1);
+        //         // body.append(br);
+        //         // body.append(hr);                
+        //     } catch (error) {
+        //         console.log("error-",e); 
+        //     }
+        //     console.log("bye");
+        // }
+        
+        // let url="https://catfact.ninja/fact";
+
+        // let body=document.querySelector("body");
+        // let button=document.querySelector("button");
+        // let p=document.querySelector("p");
+        // button.addEventListener("click",getFacts)
+        // async function getFacts() {
+        //     try {
+        //         // let res=await fetch(url);
+        //         // let data=await res.json();
+        //         let res=await axios.get(url);
+        //         console.log(res.data.fact);
+        //         let p1=document.createElement("p1");
+        //         let br = document.createElement("br")
+        //         let hr = document.createElement("hr")
+        //         p1.innerText=res.data.fact
+        //         body.append(p1);
+        //         body.append(br);
+        //         body.append(hr);                
+        //     } catch (error) {
+        //         console.log("error-",e); 
+        //     }
+        //     console.log("bye");
+        // }
+
+
+        // fetch(url)
+        // .then((response)=>{
+        //     // console.log(response);
+        //     return response.json()
+        // })
+        // .then((data)=>{console.log(data.fact);
+        //     return fetch(url);
+        // })
+        // .then((response)=>{
+        //     // console.log(response);
+        //     return response.json()
+        // })
+        // .then((data)=>{console.log(data.fact);
+        // })
+        // .catch((err)=>{
+        //     console.log("error",err);
+            
+        // })
+        // let jsonrep='{"fact": "Cats hearing is much more sensitive than humans and dogs.","length": 58}'; 
+        // console.log();
+        // let jr=JSON.parse(jsonrep);
+        // console.log(jr);
+        // console.log(jr.fact);
+        // console.log(jr.length);        
+    </script>
+</body>
+</html>
