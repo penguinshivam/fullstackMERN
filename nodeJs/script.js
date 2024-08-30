@@ -22,6 +22,15 @@
 // console.log(somevalue.sum(1,2));
 
 
-const fruits=require("./fruits")
+// const fruits=require("./fruits")
 
-console.log(fruits);
+// console.log(fruits);
+
+import {sum,pi} from "./math.js"
+
+import{generate} from "random-words"
+
+console.log(generate());
+
+
+// console.log(sum(1,2));
