@@ -19,16 +19,25 @@ app.listen(port,()=>{
 //     res.send("<h1>hello</h1><ul> <li>apple</li> </ul>");
 
 // });
-// app.get("/",(req,res)=>{
-//     res.send("home page")
-//     //̥ res.send("<h1>hello</h1><ul> <li>apple</li> </ul>");
+app.get("/",(req,res)=>{
+    res.send("home page")
+    //̥ res.send("<h1>hello</h1><ul> <li>apple</li> </ul>");
 
-// });
+});
 // app.get("*",(req,res)=>{
     
 //     res.send("not page does exist")
 // });
-app.get("/:getFruit",(req,res)=>{
-    let getFruit=req.params.getFruit;
-    res.send(`welcome ${getFruit}`)
+// app.get("/:getFruit",(req,res)=>{
+//     let getFruit=req.params.getFruit;
+//     res.send(`welcome ${getFruit}`)
+// })
+app.get("/search",(req,res)=>{
+    let { q }=req.query;
+    if (!q) {
+        res.send(`<h1>not exist</h1 >`)
+        
+    }
+    // let getFruit=req.params.getFruit;
+    res.send(`<h1>welcome</h1 >${q}`)
 })
