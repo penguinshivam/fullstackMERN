@@ -16,6 +16,7 @@ class Student extends Person{
 }
 
 let stu1=new Student("adam",12,95)
+let stu2=new Student("adam",12,95)
 
 class Teacher extends Person{
     constructor(name,age,subject){
