@@ -12,13 +12,17 @@
     <div class="post">
         <h3 class="username">@<%=post.username %></h3>
         <h4 class="content"><%= post.content %></h4>
-
-        <a href="http://localhost:8080/posts/<%=post.id%>/edit">Edit </a>
-        <br>
-        <a href="http://localhost:8080/posts/<%=post.id%>">See in Details </a>
+        <div style=" display: flex;justify-content: flex-start; justify-content: space-between;">
+        <form method="get"  action="/posts/<%=post.id%>/edit">
+            <button>Edit Post</button>
+        </form>
+        <form method="post" action="/posts/<%=post.id%>">
+            <button>View Post</button>
+        </form>
         <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
             <button>Delete Post</button>
         </form>
+    </div>
     </div>    
     <% } %>
     <br><br><br>
