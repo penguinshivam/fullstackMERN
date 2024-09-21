@@ -51,10 +51,10 @@ app.get("/chats/:id/edit",async (req,res)=>{
     let chat = await Chat.findById(id);
     res.render("edit.ejs",{chat})
 });
-app.put("/chats/:id",(req,res)=>{
+app.put("/chats/:id",async (req,res)=>{
     let {id}=req.params;
     let {msg:newmsg}=req.body;
-    let updatedChat=Chat.findByIdAndUpdate(
+    let updatedChat= await Chat.findByIdAndUpdate(
         id,
         {msg:newmsg},
         {runValidators:true,new:true}
@@ -62,6 +62,13 @@ app.put("/chats/:id",(req,res)=>{
     console.log(updatedChat);
     res.redirect("/chats");
     
+})
+app.delete("/chats/:id",async (req,res)=>{
+    let {id}= req.params
+    let deletedchat=await Chat.findByIdAndDelete(id);
+    console.log(deletedchat);
+    res.redirect("/chats");
+
 })
 
 app.get("/",(req,res)=>{
