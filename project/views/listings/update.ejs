@@ -1,0 +1,24 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+    <h3>create a new listing</h3>
+    <form method="post" action="/listings/<%=listing._id%>?_method=PUT">
+        <input name="listing[title]" placeholder="enter Title" type="text" value="<%=listing.title%>">
+        <br>
+        <br>
+        <textarea name="listing[description]" placeholder="enter description" ><%=listing.description%></textarea>
+        <br>
+        <br>
+        <input name="listing[image]" placeholder="enter image URL/Link" type="text" value="<%=listing.image.url%>">
+        <br>
+        <br>
+        <input name="listing[price]" placeholder="enter price" type="number" value="<%=listing.price%>">
+        <br>
+        <br>
+        <input name="listing[country]" placeholder="enter country" type="text" value="<%=listing.country%>">
+        <br>
+        <br>
+        <input name="listing[location]" placeholder="enter location" type="text" value="<%=listing.location%>">
+        <br><br>
+        <button>Update</button>
+    </form>
+</body>

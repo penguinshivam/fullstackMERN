@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<% layout('/layouts/boilerplate') %>
 <body>
     <h3>Listings details:</h3>
     <ul>
@@ -14,6 +8,11 @@
         <li> <%= listing.location%></li>
         <li> <%= listing.country%></li>
     </ul>
+    <form method="get" action="/listings/<%=listing._id%>/update">
+        <button>Update</button>
+    </form>
+    <form method="post" action="/listings/<%=listing._id%>?_method=DELETE">
+        <button>Delete</button>
+    </form>
     
 </body>
-</html>
