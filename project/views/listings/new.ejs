@@ -3,9 +3,9 @@
     <div class="col-8 offset-2 ">
         <br><br>
   <h3>Create a new listing</h3>
-  <form method="post" action="/listings" novalidate class="needs-validation">
+  <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
     <div class="mb-3">
-      <label for="title" class="form-lable">Title</label>
+      <label for="title" class="form-label">Title</label>
       <input
         name="listing[title]"
         placeholder="enter Title"
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="mb-3">
-      <label for="description" class="form-lable">Description</label>
+      <label for="description" class="form-label">Description</label>
       <textarea
         name="listing[description]"
         placeholder="enter description"
@@ -32,17 +32,17 @@
     <div class="mb-3">
       <label 
       for="image" 
-      class="form-lable">Image</label>
+      class="form-label">Upload Image</label>
       <input
         name="listing[image]"
-        placeholder="enter image URL/Link"
-        type="text"
+        type="file"
         class="form-control"
+        required
       />
     </div>
     <div class="row">    
         <div class="mb-3 col-md-4 ">
-          <label for="price" class="form-lable">Price</label>
+          <label for="price" class="form-label">Price</label>
           <input
             name="listing[price]"
             placeholder="enter price"
@@ -59,7 +59,7 @@
       </div>
         </div>
         <div class="mb-3 col-md-8">
-          <label for="country" class="form-lable">Country</label>
+          <label for="country" class="form-label">Country</label>
           <input
             name="listing[country]"
             placeholder="enter country"
@@ -77,7 +77,7 @@
         </div>
     </div>
     <div class="mb-3">
-        <label for="location" class="form-lable">Location</label>
+        <label for="location" class="form-label">Location</label>
         <input
           name="listing[location]"
           placeholder="enter location"
