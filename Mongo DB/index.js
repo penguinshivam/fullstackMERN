@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 
-// let url="http://localhost:8080/users"
+let url="http://localhost:8080/users"
 
 main()
     .then((res)=>{
