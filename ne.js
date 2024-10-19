@@ -1,18 +1,18 @@
-// function callName(){
-//     let nam = "world";
+function callName(){
+    let nam = "world";
 
-//     // function reg(){
-//     //     console.log("hello "+nam);
-//     // }
-//     // reg();   
-//     let reg3=(()=>{
-//         console.log("hello "+this.nam);
-//     });
-//     reg3();
+    // function reg(){
+    //     console.log("hello "+nam);
+    // }
+    // reg();   
+    let reg3=(()=>{
+        console.log("hello "+this.nam);
+    });
+    reg3();
 
-// };
-// callName();
-// reg3();
+};
+callName();
+reg3();
 
 function myclass(){
     let b = 3;
