@@ -11,7 +11,7 @@ export default function ProductTab() {
     <div style={styles}> 
       <Product title="Logitech MX Master" idx={0}/>
       <Product title="Apple Pencil" idx={1}/>
-      <Product title="Zebronics Zeb-Transformer" idx={2}/>
+      <Product title="Zebronics Zeb" idx={2}/>
       <Product title="Petronics Toad" idx={3}/>
     </div>
   );
