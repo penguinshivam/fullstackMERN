@@ -28,7 +28,6 @@ export default function LudoBoard() {
   return (
     <div>
       <p>Game begins</p>
-      <p>{arr}</p>
       <div>
         <p>Blue Moves={moves.blue}</p>
         <button style={{ backgroundColor: "blue" }} onClick={blueIncCount}>
