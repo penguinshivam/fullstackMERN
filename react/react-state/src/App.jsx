@@ -6,6 +6,9 @@ import LudoBoard from './LudoBoard'
 import TodoList from './TodoList'
 import Form from './Form'
 import CommentsForm from './CommentForm'
+import Comment from './Comment'
+import Counter2 from './counter2'
+import Joker from './Joker'
 
 function App() {
 
@@ -18,7 +21,10 @@ function App() {
     {/* <LudoBoard/> */}
     {/* <TodoList/> */}
     {/* <Form/> */}
-    <CommentsForm></CommentsForm>
+    {/* <CommentsForm/> */}
+    {/* <Comment/> */}
+    {/* <Counter2/> */}
+    <Joker></Joker>
     </>
   )
 }
