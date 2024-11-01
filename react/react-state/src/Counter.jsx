@@ -10,13 +10,13 @@ export default function Counter(){
     function incCount(){
         // setCount((currCount)=>{
         //     return currCount+1;
-        // });        
-        for (let index = 0; index < Math.floor(Math.random()*5)+1; index++) {
-            setCount((currCount)=>{
-                return currCount+1;
-            });        
-        }
-        // setCount(count+1);
+        // // });        
+        // for (let index = 0; index < Math.floor(Math.random()*5)+1; index++) {
+        //     setCount((currCount)=>{
+        //         return currCount+1;
+        //     });        
+        // }
+        setCount(count+1);
     }
     return(
         <div>
