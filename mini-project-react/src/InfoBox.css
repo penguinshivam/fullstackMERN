@@ -1,3 +1,12 @@
 .InfoBox{
     text-align: center;
+    /* display: flex; */
+}
+.card{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+#card{
+    border: 1px solid black;
 }
