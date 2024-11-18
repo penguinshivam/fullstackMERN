@@ -50,9 +50,3 @@ let objP={
 let ar=(name)=>{console.log(name);}
 
 ar("let");
-
-const add = (x,y)=>{
-    console.log(arguments);
-    return x*y;
-}
-console.log(add(10,15));
